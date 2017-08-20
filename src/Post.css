@@ -1,0 +1,9 @@
+.upper {
+   background-color: #00bcd4;
+   display: flex;
+ }
+
+.bottom {
+   background-color: rgba(0, 0, 0, .1);
+   display: flex;
+ }

@@ -6,7 +6,6 @@ import {
 } from 'react-router-dom';
 import Home from './Home';
 import Post from './Post';
-import './App.css';
 
 class App extends Component {
   render() {
