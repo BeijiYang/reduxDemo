@@ -40,8 +40,8 @@ class CommentBox extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  comments: state
+const mapStateToProps = (state) => ({ //传入状态树
+  comments: state.comments
 })
 
 export default connect(mapStateToProps)(CommentBox)

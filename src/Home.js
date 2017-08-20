@@ -2,25 +2,11 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './home.css'
 
-class Home extends Component {
-  state = {
-    posts: [
-      {
-        'id': '0',
-        'title': 'Post0'
-      },
-      {
-        'id': '1',
-        'title': 'Post1'
-      },
-      {
-        'id': '2',
-        'title': 'Post2'
-      }
-  ]}
+import { connect } from 'react-redux'
 
+class Home extends Component {
   render() {
-    let postList = this.state.posts.slice().map(
+    let postList = this.props.posts.slice().map(
       (item) => (
         <Link key={item.id} to={`/post/${item.id}`} className="post-item">
           {item.title}
@@ -38,4 +24,8 @@ class Home extends Component {
   }
 }
 
-export default Home
+const mapStateToProps = (state) => ({
+  posts: state.posts
+})
+
+export default connect(mapStateToProps)(Home)
