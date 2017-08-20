@@ -3,22 +3,24 @@ import store from './redux/store'
 import "./comment-box.css";
 
 class CommentBox extends Component {
-  state = {
-    comments: [
-      'comment1',
-      'comment2'
-    ]
-  }
+  // state = {
+  //   comments: [
+  //     'comment1',
+  //     'comment2'
+  //   ]
+  // }
 
   onSubmit = e => {
     e.preventDefault()
-    let comments = this.state.comments.slice()
-    let content = this.commentInput.value
-    comments.push(content)
-    this.setState(
-      {comments}
-    )
+    let comment = this.commentInput.value
+    store.dispatch({type: 'ADD_COMMENT', comment})
+    // let comments = store.getState().slice()
+    // comments.push(content)
+    // this.setState(
+    //   {comments}
+    // )
     this.commentInput.value = ''
+    console.log(store.getState());
   }
 
   render() {
