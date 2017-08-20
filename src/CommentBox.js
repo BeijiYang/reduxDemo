@@ -16,7 +16,6 @@ class CommentBox extends Component {
   }
 
   render() {
-    // let commentList = store.getState().slice().reverse().map(
     let commentList = this.props.comments.slice().reverse().map(
       (item,i) => (<li key={i}>{item}</li>)
     )
