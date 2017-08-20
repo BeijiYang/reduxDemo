@@ -1,30 +1,23 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import store from './redux/store'
-import "./comment-box.css";
+import "./comment-box.css"
+
+import { connect } from 'react-redux'
 
 class CommentBox extends Component {
-  // state = {
-  //   comments: [
-  //     'comment1',
-  //     'comment2'
-  //   ]
-  // }
 
   onSubmit = e => {
     e.preventDefault()
     let comment = this.commentInput.value
     store.dispatch({type: 'ADD_COMMENT', comment})
-    // let comments = store.getState().slice()
-    // comments.push(content)
-    // this.setState(
-    //   {comments}
-    // )
+
     this.commentInput.value = ''
     console.log(store.getState());
   }
 
   render() {
-    let commentList = store.getState().slice().reverse().map(
+    // let commentList = store.getState().slice().reverse().map(
+    let commentList = this.props.comments.slice().reverse().map(
       (item,i) => (<li key={i}>{item}</li>)
     )
 
@@ -48,4 +41,8 @@ class CommentBox extends Component {
   }
 }
 
-export default CommentBox;
+const mapStateToProps = (state) => ({
+  comments: state
+})
+
+export default connect(mapStateToProps)(CommentBox)

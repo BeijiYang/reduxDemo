@@ -7,16 +7,21 @@ import {
 import Home from './Home';
 import Post from './Post';
 
+import { Provider } from 'react-redux';
+import store from './redux/store'
+
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Router>
-          <Switch>
-            <Route exact path='/' component={Home} />
-            <Route path='/post' component={Post} />
-          </Switch>
-        </Router>
+        <Provider store={store}>
+          <Router>
+            <Switch>
+              <Route exact path='/' component={Home} />
+              <Route path='/post' component={Post} />
+            </Switch>
+          </Router>
+        </Provider>
       </div>
     );
   }
