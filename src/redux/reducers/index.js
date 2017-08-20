@@ -6,7 +6,7 @@ let comments = [
 export default function rootReducer(state=comments, action) {
   switch (action.type) {
     case 'ADD_COMMENT':
-      return [...comments, action.comment]
+      return [...state, action.comment]
     default:
       return state
   }
