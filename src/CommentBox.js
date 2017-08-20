@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import store from './redux/store'
 import "./comment-box.css";
 
 class CommentBox extends Component {
@@ -21,7 +22,7 @@ class CommentBox extends Component {
   }
 
   render() {
-    let commentList = this.state.comments.slice().reverse().map(
+    let commentList = store.getState().slice().reverse().map(
       (item,i) => (<li key={i}>{item}</li>)
     )
 
