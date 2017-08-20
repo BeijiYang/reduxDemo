@@ -2,6 +2,40 @@
    background-color: #fff;
    min-width: 85%;
    margin: 30px auto;
+   padding: 10px;
    box-shadow: 0 2px 2px rgba(0, 0, 0, .5);
    min-height: 300px;
 }
+
+form {
+   display: flex;
+   margin-top: 20px;
+ }
+
+ .form input{
+   flex-grow: 1;
+   height: 30px;
+   line-height: 30px;
+ }
+
+ .form button {
+   background-color: #FF5252;
+   margin-left: 10px;
+   padding: 0 10px;
+   border: none;
+   line-height: 30px;
+   outline: none;
+   color: white;
+ }
+
+ .comment-box button:hover {
+   cursor: pointer;
+ }
+
+ .comment-box .comment-list {
+   margin-top: 20px;
+ }
+ .comment-box li {
+   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+   line-height: 30px;
+ }
