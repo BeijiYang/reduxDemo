@@ -1,6 +1,6 @@
 let comments = [
-  'comment1',
-  'comment2'
+  'comment0',
+  'comment1'
 ]
 
 export default function rootReducer(state=comments, action) {
