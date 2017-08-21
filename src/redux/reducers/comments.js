@@ -16,7 +16,8 @@ let comments = [
 export default function commentsReducer(state=comments, action) {
   switch (action.type) {
     case 'ADD_COMMENT':
-      return [...state, action.comment]
+      console.log(action);
+      return [...state, {'text':action.text, 'post':action.postId}]
     default:
       return state
   }
