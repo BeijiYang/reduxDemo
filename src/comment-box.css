@@ -16,7 +16,12 @@ form {
    flex-grow: 1;
    height: 30px;
    line-height: 30px;
+   text-indent: 10px;
  }
+
+ .form input:focus {
+   outline: 0;
+}
 
  .form button {
    background-color: #FF5252;
