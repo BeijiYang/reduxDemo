@@ -1,16 +1,30 @@
 .post-body {
-   background-color: #fff;
-   min-width: 85%;
-   margin: 30px auto;
-   box-shadow: 0 2px 2px rgba(0, 0, 0, .5);
-   min-height: 300px;
-   position: relative;
- }
-.post-body .comment-num {
-  display: inline-block;
-  padding: 5px 10px;
+  background-color: #fff;
+  min-width: 85%;
+  margin: 30px auto;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, .5);
+  min-height: 300px;
+  position: relative;
+}
+
+.post-body .num-wrap {
+  display: flex;
   position: absolute;
   bottom: 20px;
-  right: 10px;
+  width: auto;
+  right: 20px;
+}
+
+.post-body .comment-num, .post-body .like-num {
+  display: block;
+  padding: 5px 10px;
   background-color: rgba(0, 0, 0, .1);
+}
+
+.post-body .like-num {
+  margin-right: 10px;
+}
+
+.post-body .like-num:hover {
+  cursor: pointer;
 }
