@@ -18,7 +18,7 @@ class App extends Component {
           <Router>
             <Switch>
               <Route exact path='/' component={Home} />
-              <Route path='/post' component={Post} />
+              <Route path='/post/:id' component={Post} />
             </Switch>
           </Router>
         </Provider>

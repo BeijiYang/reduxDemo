@@ -5,13 +5,15 @@ import './Post.css';
 
 class Post extends Component {
   render() {
+    let { id } = this.props.match.params
+
     return (
       <div className="Post">
         <div className="upper">
-           <PostBody />
+           <PostBody postId= { id } />
          </div>
          <div className="bottom">
-           <CommentBox />
+           <CommentBox postId={ id } />
          </div>
       </div>
 

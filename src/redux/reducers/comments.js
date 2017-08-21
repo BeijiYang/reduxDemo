@@ -1,6 +1,16 @@
 let comments = [
-  'comment0',
-  'comment1'
+  {
+     text: '66666666',
+     post: '0'
+   },
+   {
+     text: '233333',
+     post: '1'
+   },
+   {
+     text: '6666699999',
+     post: '1'
+   }
 ]
 
 export default function commentsReducer(state=comments, action) {
